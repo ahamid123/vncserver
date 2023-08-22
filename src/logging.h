@@ -1,16 +1,17 @@
 #pragma once
 extern int bg;
+extern int silent;
 #define error_print(...)              \
     do                                \
     {                                 \
-        if (!bg)                      \
+        if (!silent)                      \
             fprintf(stderr, __VA_ARGS__); \
     } while (0)
 
 #define info_print(...)               \
     do                                \
     {                                 \
-        if (!bg)                      \
+        if (!silent)                      \
             fprintf(stderr, __VA_ARGS__); \
     } while (0)
 
